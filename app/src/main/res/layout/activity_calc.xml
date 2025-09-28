@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalcActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/firstSolution_top_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/firstSolution_bottom_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="130dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/noSolutionOrOnlySolution_top_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="160dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/noSolutionOrOnlySolution_bottom_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="190dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/secondSolution_top_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="220dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/secondSolution_bottom_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="250dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/solution_left_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/solution_right_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="380dp" />
+
+    <TextView
+        android:id="@+id/tV_firstSolution_calc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:text="x1="
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/firstSolution_bottom_calc"
+        app:layout_constraintEnd_toStartOf="@+id/solution_right_calc"
+        app:layout_constraintStart_toStartOf="@+id/solution_left_calc"
+        app:layout_constraintTop_toTopOf="@+id/firstSolution_top_calc" />
+
+    <TextView
+        android:id="@+id/tV_noSolutionOrOnlySolution_calc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/noSolutionOrOnlySolution_bottom_calc"
+        app:layout_constraintEnd_toStartOf="@+id/solution_right_calc"
+        app:layout_constraintStart_toStartOf="@+id/solution_left_calc"
+        app:layout_constraintTop_toTopOf="@+id/noSolutionOrOnlySolution_top_calc" />
+
+    <TextView
+        android:id="@+id/tV_secondSolution_calc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:text="x2="
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/secondSolution_bottom_calc"
+        app:layout_constraintEnd_toStartOf="@+id/solution_right_calc"
+        app:layout_constraintStart_toStartOf="@+id/solution_left_calc"
+        app:layout_constraintTop_toTopOf="@+id/secondSolution_top_calc" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/graph_bottom_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="600dp" />
+
+    <ImageView
+        android:id="@+id/iV_graph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/graph_bottom_calc"
+        app:layout_constraintEnd_toStartOf="@+id/solution_right_calc"
+        app:layout_constraintStart_toStartOf="@+id/solution_left_calc"
+        app:layout_constraintTop_toTopOf="@+id/graph_top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/graph_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="300dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="returnWithAns"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iV_graph" />
+</androidx.constraintlayout.widget.ConstraintLayout>

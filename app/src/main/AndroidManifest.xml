@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExN082">
         <activity
+            android:name=".CalcActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -117,6 +117,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="putRandomValue"
         android:text="randomize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,6 +128,7 @@
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:onClick="goToCalcActivity"
         android:text="solve"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,14 +141,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="480dp" />
+        app:layout_constraintGuide_begin="430dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/firstSolutions_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="510dp" />
+        app:layout_constraintGuide_begin="460dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/solution_left"
@@ -169,14 +171,14 @@
         android:gravity="left"
         android:text="x1="
         android:textSize="20sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/firstSolutions_bottom"
         app:layout_constraintEnd_toStartOf="@+id/solution_right"
         app:layout_constraintStart_toStartOf="@+id/solution_left"
-        app:layout_constraintTop_toTopOf="@+id/firstSolutions_top"
-        tools:visibility="invisible" />
+        app:layout_constraintTop_toTopOf="@+id/firstSolutions_top" />
 
     <TextView
-        android:id="@+id/tV_noSolution"
+        android:id="@+id/tV_noSolutionOrOnlySolution"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="left"
@@ -195,7 +197,7 @@
         android:text="x2="
         android:textSize="20sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintBottom_toTopOf="@+id/secondSolution_bottom"
         app:layout_constraintEnd_toStartOf="@+id/solution_right"
         app:layout_constraintStart_toStartOf="@+id/solution_left"
         app:layout_constraintTop_toTopOf="@+id/secondSolution_top" />
@@ -205,27 +207,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="530dp" />
+        app:layout_constraintGuide_begin="490dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/noSolutionOrOnlySolution_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="560dp" />
+        app:layout_constraintGuide_begin="520dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/secondSolution_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="590dp" />
+        app:layout_constraintGuide_begin="550dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
+        android:id="@+id/secondSolution_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="620dp" />
+        app:layout_constraintGuide_begin="580dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
